@@ -36,12 +36,15 @@ text-align: center;
         var link4script = selectedData[8];
         var link5script = selectedData[10];
 
-        $('#quest_script').text = questScript;
+        $('#quest_script').text(questScript);
       }
 
       function clickLink(index)
       {
-        alert(selectedData[index]);
+        if (selectedData[index])
+        {
+            alert(selectedData[index]);
+        }
       }
 </script>
 </head>
