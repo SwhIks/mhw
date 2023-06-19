@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>몬스터헌터 월드 보드게임 퀘스트</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+div{
+text-align: center;
+}
+</style>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // $.ajax({
+        // type: "GET",
+        // url: "dosjagras.csv",
+        // dataType: "text",
+        // success: function(data) {processData(data);}
+    //  });
+            const inp=document.querySelector('input');
+            const fr=new FileReader();
+            fr.onload=(e)=>{
+                console.log(e.target.result);
+            }
+            inp.onchange=(e)=>{
+                const [file]=e.target.files;
+                fr.readAsBinaryString(file);
+            }
+    });
+
+    function processData(allText) {
+        alert('sss');
+    var allTextLines = allText.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(',');
+    var lines = [];
+
+    for (var i=1; i<allTextLines.length; i++) {
+        var data = allTextLines[i].split(',');
+        if (data.length == headers.length) {
+
+            var tarr = [];
+            for (var j=0; j<headers.length; j++) {
+                tarr.push(headers[j]+":"+data[j]);
+            }
+            lines.push(tarr);
+        }
+    }
+    alert(lines);
+}
+</script>
+</head>
+<body bgcolor="#e9d5b4">
+<div>
+<!--img src="../image/m1_1.png" alt="" usemap="#Map" class="margin-left: auto;"-->
+<map name="Map" id="Map">
+    <area target=""  href="../index.html" coords="790,50,1040,180" shape="rect">
+    <area target=""  href="page21.html" coords="454,1666,628,1768" shape="rect">
+</map>
+</div>
+</body>
+</html>
