@@ -16,22 +16,55 @@ text-align: center;
 
       var allRows;
       var currentIndex = 0;
+      var selectedData;
 
       function successFunction(data) {
         allRows = data.split("@!@");
 
-        loadRow(0);
+        loadRow(1);
       }
 
       function loadRow(index)
       {
         currentIndex = index;
-        alert(allRows[currentIndex]);
+
+        selectedData = allRows[currentIndex].split(",");
+        var questScript = selectedData[1];
+        var link1script = selectedData[2];
+        var link2script = selectedData[4];
+        var link3script = selectedData[6];
+        var link4script = selectedData[8];
+        var link5script = selectedData[10];
+
+        $('#quest_script').text = questScript;
+      }
+
+      function clickLink(index)
+      {
+        
       }
 </script>
 </head>
 <body bgcolor="#e9d5b4">
 <div>
+    <div>
+    <p id="quest_script">aaaaa</p>
+    </div>
+    <div onclick="clickLink(0)">
+        <p id="link_1">aaaaa</p>
+    </div>
+    <div onclick="clickLink(1)">
+        <p id="link_2">aaaaa</p>
+    </div>
+    <div onclick="clickLink(2)">
+        <p id="link_3">aaaaa</p>
+    </div>
+    <div onclick="clickLink(3)">
+        <p id="link_4">aaaaa</p>
+    </div>
+    <div onclick="clickLink(4)">
+        <p id="link_5">aaaaa</p>
+    </div>
 </div>
 </body>
 </html>
