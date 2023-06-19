@@ -10,7 +10,7 @@ text-align: center;
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
         $.ajax({
-        url: './data/baroth.csv',
+        url: './dosjagras.csv',
         dataType: 'text',
       }).done(successFunction);
 
@@ -32,7 +32,7 @@ text-align: center;
         var questNo = selectedData[0];
         var questScript = selectedData[1];
 
-        $('#quest_script').text(questNo + "\n\n" + questScript.replace(/#!#/g, ','));
+        $('#quest_script').text(questNo + "\n\n" + questScript);
 
         var link1script = selectedData[2];
         var link2script = selectedData[4];
@@ -43,7 +43,7 @@ text-align: center;
         if (link1script)
         {
             $('#link_1_box').css("display","block");
-            $('#link_1').text(link1script.replace(/#!#/g, ','));
+            $('#link_1').text(link1script);
         }
         else {
             $('#link_1_box').css("display","none");
@@ -51,7 +51,7 @@ text-align: center;
         if (link2script)
         {
             $('#link_2_box').css("display","block");
-            $('#link_2').text(link2script.replace(/#!#/g, ','));
+            $('#link_2').text(link2script);
         }
         else {
             $('#link_2_box').css("display","none");
@@ -59,7 +59,7 @@ text-align: center;
         if (link3script)
         {
             $('#link_3_box').css("display","block");
-            $('#link_3').text(link3script.replace(/#!#/g, ','));
+            $('#link_3').text(link3script);
         }
         else {
             $('#link_3_box').css("display","none");
@@ -67,7 +67,7 @@ text-align: center;
         if (link4script)
         {
             $('#link_4_box').css("display","block");
-            $('#link_4').text(link4script.replace(/#!#/g, ','));
+            $('#link_4').text(link4script);
         }
         else {
             $('#link_4_box').css("display","none");
@@ -75,7 +75,7 @@ text-align: center;
         if (link5script)
         {
             $('#link_5_box').css("display","block");
-            $('#link_5').text(link5script.replace(/#!#/g, ','));
+            $('#link_5').text(link5script);
         }
         else {
             $('#link_5_box').css("display","none");
