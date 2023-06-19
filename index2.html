@@ -29,6 +29,7 @@ text-align: center;
         currentIndex = index;
 
         selectedData = allRows[currentIndex].split(",");
+        var questNo = selectedData[0];
         var questScript = selectedData[1];
         var link1script = selectedData[2];
         var link2script = selectedData[4];
@@ -36,14 +37,20 @@ text-align: center;
         var link4script = selectedData[8];
         var link5script = selectedData[10];
 
-        $('#quest_script').text(questScript);
+        $('#quest_script').text(questNo + "\n\n" + questScript);
+        $('#link_1').text(link1script1);
+        $('#link_2').text(link1script2);
+        $('#link_3').text(link1script3);
+        $('#link_4').text(link1script4);
+        $('#link_5').text(link1script5);
+
       }
 
       function clickLink(index)
       {
         if (selectedData[index])
         {
-            alert(selectedData[index]);
+            loadRow(index);
         }
       }
 </script>
@@ -53,19 +60,19 @@ text-align: center;
     <div>
     <p id="quest_script">aaaaa</p>
     </div>
-    <div onclick="clickLink(3)">
+    <div onclick="clickLink(3)" bgcolor="#b4d5e9">
         <p id="link_1">aaaaa</p>
     </div>
-    <div onclick="clickLink(5)">
+    <div onclick="clickLink(5)" bgcolor="#b4d5e9">
         <p id="link_2">aaaaa</p>
     </div>
-    <div onclick="clickLink(7)">
+    <div onclick="clickLink(7)" bgcolor="#b4d5e9">
         <p id="link_3">aaaaa</p>
     </div>
-    <div onclick="clickLink(9)">
+    <div onclick="clickLink(9)" bgcolor="#b4d5e9">
         <p id="link_4">aaaaa</p>
     </div>
-    <div onclick="clickLink(11)">
+    <div onclick="clickLink(11)" bgcolor="#b4d5e9">
         <p id="link_5">aaaaa</p>
     </div>
 </div>
